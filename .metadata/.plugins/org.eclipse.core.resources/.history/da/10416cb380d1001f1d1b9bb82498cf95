@@ -1,0 +1,16 @@
+package java8Task;
+
+interface Demo {
+
+	void display();
+
+}
+
+public class LambdaExpreessionDemo {
+
+	public static void main(String[] args) {
+		Demo demo = () -> System.out.println("Lambda is called");
+		demo.display();
+	}
+
+}

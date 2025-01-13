@@ -1,0 +1,32 @@
+package java8Task;
+
+@FunctionalInterface
+interface Demo {
+	abstract void m1();
+
+	default void defaultMethod() {
+		System.out.println("Default method of Interface");
+	}
+
+	static void staticMethod() {
+		System.out.println("Static method of Interface");
+	}
+
+}
+
+public class DefaultAndStaticDemo implements Demo {
+
+	@Override
+	public void m1() {
+		System.out.println("M1 method of Interface ");
+	}
+
+	public static void main(String[] args) {
+		Demo.staticMethod();
+		DefaultAndStaticDemo ds = new DefaultAndStaticDemo();
+		ds.defaultMethod();
+		ds.m1();
+
+	}
+
+}
